@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Control System</title>
+    <link rel="stylesheet" href="./main.css">
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./main.js"></script>
+</head>
+<body>
+    <div class = "main">
+        <div class = "Logomain">
+            <img src = "./bachkhoa.jpg" alt="Anh Bach Khoa" class = "logobachkhoa">
+            <div class = "Cokhi">
+                <img src = "./cokhi.png" alt="Anh Co Khi" class = "logocokhi">
+            </div>
+            <div class = "smarthome">
+                <img src = "./smarthome.png" alt="Nha Thong Minh" class = "logosmarthome">
+            </div>  
+        </div>    
+        <div class = "Tentruong">
+            <h2>The university of DaNang</h2>
+            <h2>University of Science and Technology</h2>
+            <h2>Faculty of Mechanical Engineering</h2> 
+        </div> 
+        <div class = "tieude">
+            <h1 > Màn hình giám sát và điều khiển thiết bị </h1>
+        </div>
+
+        <div class="titlecontrol">
+            <div class="screencontrol">
+                <div class="control-frame">
+                    <h1>Màn hình điều khiển thiết bị</h1>
+                    <!-- Điều khiển đèn -->
+                    <div class="lightsystem">
+                        <h2> Hệ thống đèn </h2>
+                    </div>
+                    <div class = "spansystem">
+                        <h2> Hệ thống quạt </h2>
+                    </div>
+                    <div class = "remsystem">
+                        <h2> Hệ thống rèm cửa </h2>
+                    </div>
+                    <div class = "cuasystem">
+                        <h2> Hệ thống cửa </h2>
+                    </div>
+                    <div class="control-light">
+                        <div class="light1-title">
+                            <p>Đèn 1: </p>
+                        </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-checkbox" id="toggle1" onclick="toggleButtonClick(1)" />
+                            <label class="toggle-label" for="toggle1">
+                                <div class="toggle-indicator" id="indicator1"></div>
+                                <div class="toggle-text"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-light">
+                        <div class="light2-title">
+                            <p>Đèn 2: </p>
+                        </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-checkbox" id="toggle2" onclick="toggleButtonClick(2)" />
+                            <label class="toggle-label" for="toggle2">
+                                <div class="toggle-indicator" id="indicator2"></div>
+                                <div class="toggle-text"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-light">
+                        <div class="light3-title">
+                            <p>Đèn 3: </p>
+                        </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-checkbox" id="toggle3" onclick="toggleButtonClick(3)" />
+                            <label class="toggle-label" for="toggle3">
+                                <div class="toggle-indicator" id="indicator3"></div>
+                                <div class="toggle-text"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-light">
+                        <div class="light4-title">
+                            <p>Đèn 4: </p>
+                        </div>
+                        <div class="toggle-container">
+                            <input type="checkbox" class="toggle-checkbox" id="toggle4" onclick="toggleButtonClick(4)" />
+                            <label class="toggle-label" for="toggle4">
+                                <div class="toggle-indicator" id="indicator4"></div>
+                                <div class="toggle-text"></div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Điều khiển quạt -->
+                    <div class="control-span">
+                        <div class="span1-title">
+                            <p>Quạt 1: </p>
+                        </div>
+                        <div class="toggle-container1">
+                            <input type="checkbox" class="toggle-checkbox1" id="toggleFan1" onclick="toggleButtonClickFan(1)" />
+                            <label class="toggle-label1" for="toggleFan1">
+                                <div class="toggle-indicator1" id="indicatorFan1"></div>
+                                <div class="toggle-text1"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-span">
+                        <div class="rem1-title">
+                            <p>Rèm 1: </p>
+                        </div>
+                        <div class="toggle-container2">
+                            <input type="checkbox" class="toggle-checkbox2" id="toggleRem1" onclick="toggleButtonClickRem(1)" />
+                            <label class="toggle-label2" for="toggleRem1">
+                                <div class="toggle-indicator2" id="indicatorRem1"></div>
+                                <div class="toggle-text2"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-span">
+                        <div class="rem2-title">
+                            <p>Rèm 2: </p>
+                        </div>
+                        <div class="toggle-container3">
+                            <input type="checkbox" class="toggle-checkbox3" id="toggleRem2" onclick="toggleButtonClickRem(2)" />
+                            <label class="toggle-label3" for="toggleRem2">
+                                <div class="toggle-indicator3" id="indicatorRem2"></div>
+                                <div class="toggle-text3"></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="control-span">
+                        <div class="cua-title">
+                            <p>Cửa 1: </p>
+                        </div>
+                        <div class="toggle-container4">
+                            <input type="checkbox" class="toggle-checkbox4" id="toggleCua1" onclick="toggleButtonClickCua(1)" />
+                            <label class="toggle-label4" for="toggleCua1">
+                                <div class="toggle-indicator4" id="indicatorCua1"></div>
+                                <div class="toggle-text4"></div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="screencontrol">
+                <div class="supervise-frame">
+                    <h1>Hệ thống camera giám sát</h1>
+                    <video id="cameraFeed" autoplay></video> <!-- video -->
+                    <video id="cameraFeed1" autoplay></video> <!-- video -->
+                </div>
+            </div>
+        </div>
+        <div class="mainmanhinhgiamsat">
+                <div class="manhinhgiamsat">
+                    <h1>Màn hình giám sát thiết bị</h1>
+                </div>
+            </div>
+        <div class = "thongtin">
+            <h1>Thông tin thành viên</h1>
+        </div>
+        <div class="row">
+            <div class="member">
+                <img src="../Information/linh.png" alt="Anh1">
+                <button type="button" onclick="showInformation('linh')"><a href = "../Information/linh.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="member">
+                <img src="../Information/thuy.png" alt="Anh2">
+                <button type="button" onclick="showInformation('thuy')"><a href = "../Information/thuy.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="member">
+                <img src="../Information/thanh.png" alt="Anh3">
+                <button type="button" onclick="showInformation('thanh')"><a href = "../Information/thanh.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="member">
+                <img src="../Information/phu.png" alt="Anh4">
+                <button type="button" onclick="showInformation('phu')"><a href = "../Information/phu.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="member">
+                <img src="../Information/quyen.png" alt="Anh5">
+                <button type="button" onclick="showInformation('quyen')"><a href = "../Information/quyen.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="member">
+                <img src="../Information/anh.png" alt="Anh6">
+                <button type="button" onclick="showInformation('anh')"><a href = "../Information/anh.html">Thông tin chi tiết</a></button>
+            </div>
+            <div class="logout-btn">
+                <button type="button" id="logoutButton" onclick="logout_function()">Log out</button>
+            </div>
+            
+        </div>
+</body>
+</html>
