@@ -9,9 +9,9 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    background-color: rgba(115, 193, 249, 0.83);
-    width: 1470px;
-    height: 90px;
+    background-color: rgba(255, 255, 255, 0.83);
+    width: px;
+    height: 70px;
     z-index: 1;
     border-radius: 25px; /* Adjust the value based on your preference */
 }
@@ -30,9 +30,9 @@ body {
 }
 .logosmarthome{
     display: flex;
-    width: 200px;
+    width: 220px;
     height: 200px;
-    margin-left: 1050px;
+    margin-left: 1020px;
     margin-top: 10px;
 
 }
@@ -61,6 +61,7 @@ body {
     text-align: center;
     color: red;
     position: relative;
+    top: 15px;
 }
 
 
@@ -77,10 +78,12 @@ form {
 }
 
 .row img {
+    position: relative;
     flex: 1 1 auto;
     max-width: 100%;
     width: 200px;
     height: 180px;
+    top: 100px;
     margin: 10px;
     object-fit: cover;
     border-radius: 8px;
@@ -101,7 +104,7 @@ form {
 }
 
 .member button {
-    margin-top: 10px;
+    margin-top: 120px;
     padding: 5px 10px;
     background-color: #4285f4;
     color: #ffffff;
@@ -120,6 +123,7 @@ form {
     text-align: center;
     color: red;
     position: relative;
+    top: 110px;
 }
 
 
@@ -128,6 +132,9 @@ form {
     margin-left: 100px;
 }
 .logout-btn button {
+    position: relative;
+    top: 40px;
+    left: -1350px;
     padding: 10px 20px;
     background-color: #ff0000;
     color: #ffffff;
@@ -136,10 +143,11 @@ form {
     cursor: pointer;
     font-size: 12px;
     transition: background-color 0.3s ease-in-out;
+    z-index: 1;
 }
 
 .logout-btn button:hover {
-    background-color: #7fabfd;
+    background-color: #0004ff;
 }
 
 .titlecontrol {
@@ -150,12 +158,15 @@ form {
 
 
 .control-frame {
+    position: relative;
+    top: 140px;
+    right: -90px;
     border: 2px solid #279ffc;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px;
     text-align: center;
     width: 550px; /* Điều chỉnh chiều rộng nếu cần */
-    height: 550px;
+    height: 400px;
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
     transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
@@ -165,12 +176,14 @@ form {
     box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
 }
 .supervise-frame {
+    position: relative;
+    top: 50px;
     border: 2px solid #279ffc;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 10px;
     text-align: center;
     width: 450px; /* Điều chỉnh chiều rộng nếu cần */
-    height: auto;
+    height: 560px;
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
     transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
@@ -178,6 +191,9 @@ form {
 
 .supervise-frame:hover {
     box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
+}
+.supervise-frame h2{
+    color: red;
 }
 .screencontrol {
     display: flex;
@@ -264,8 +280,12 @@ form {
 .manhinhgiamsat h1{
     position: relative;
     color: #000dff;
-    top: -200px;
+    top: -80px;
     right: -270px;
+}
+.weather-info {
+    position: absolute;
+    margin: 10px; /* Điều này có thể điều chỉnh theo nhu cầu của bạn */
 }
 .span4-title{
     font-size: 20px;
@@ -277,6 +297,12 @@ form {
     display: flex;
     align-items: center; /* Căn giữa theo chiều dọc */
     margin-top: 1px;
+}
+.button-style{
+    position: relative;
+    font-size: 20px;;
+    top: -105px;
+    right: -350px;
 }
 
 /* ------------------- Nút nhấn đèn */
@@ -565,7 +591,7 @@ form {
 }
 
 #cameraFeed {
-    margin-top: 1px;
+    margin-top: 10px;
     width: 50%; /* Tăng chiều rộng lên 70% */
     max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
     border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
@@ -576,7 +602,7 @@ form {
 }
 
 #cameraFeed1 {
-    margin-top: 30px;
+    margin-top: 10px;
     width: 50%; /* Tăng chiều rộng lên 70% */
     max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
     border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
@@ -585,5 +611,124 @@ form {
     box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
     transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
 }
+/* Độ ẩm */
+#humi-container {
+    position: absolute;
+    font-size: 10px;
+    color: red;
+    text-align: center;
+    top: 100px;
+    right: 920px;
+    z-index: 1;
+}
+#humi-value {
+    position: relative;
+    font-size: 22px;
+    color: red;
+    top: 350px;
+    right: 400px;
+}
+/* Khí ga */
+#gas-container {
+    position: absolute;
+    font-size: 22px;
+    color: red;
+    text-align: center;
+    top:  715px;
+    right: 920px;
+    z-index: 1;
+}
+#gas-value {
+    position: relative;
+    font-size: 22px;
+    color: red;
+    top: -10px;
+    right: 400px;
+}
+/* Nhiệt độ */
+#temp-container {
+    position: absolute;
+    font-family: monospace;
+    /* font-size: 22px; */
+    color: red;
+    text-align: center;
+    top:  600px;
+    right: 900px;
+    z-index: 1;
+}
+#temp-value {
+    position: relative;
+    font-size: 22px;
+    color: rgb(0, 13, 255);
+    top: -400px;
+    right: 420px;
+}
 
 
+.rectangle{
+    width: 230px;
+    height: 850px;
+    background-color: #a0d9ff;
+    position: absolute;
+    top: 161px;
+    right: 1280px;
+    margin-top: -50px; 
+    border-radius: 30px; 
+    opacity: 0.5;
+}
+.square1{
+    width: 230px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 150px;
+    margin-top: -100px; 
+    border-radius: 30px; 
+    
+    
+}
+.square2{
+    width: 230px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 300px;
+    margin-top: -50px; 
+    border-radius: 30px; 
+}
+.square3{
+    width: 230px;
+    height: 200px;
+    background-color: #ffffff;
+    position: relative;
+    top: 250px; 
+    border-radius: 30px; 
+}
+
+.texttemp{
+    position: relative;
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    top: -1020px;
+    right: 190px;
+    z-index: 1;
+    font-weight: bold;
+}
+.texttemp1{
+    position: relative;
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    top: -770px;
+    right: 700px;
+    z-index: 1;
+    font-weight: bold;
+}
+.texttemp2{
+    position: relative;
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    top: -515px;
+    right: 1190px;
+    z-index: 1;
+    font-weight: bold;
+}

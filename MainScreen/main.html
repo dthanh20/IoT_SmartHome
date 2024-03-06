@@ -24,18 +24,16 @@
             </div>  
         </div>    
         <div class = "Tentruong">
-            <h2>The university of DaNang</h2>
-            <h2>University of Science and Technology</h2>
-            <h2>Faculty of Mechanical Engineering</h2> 
-        </div> 
-        <div class = "tieude">
-            <h1 > Màn hình giám sát và điều khiển thiết bị </h1>
+            <h2 style ="color: rgba(57, 164, 251, 0.83); font-size:28px; margin-top: 30px">THE UNIVERSITY OF DANANG</h2>
+            <h2 style = "color: rgba(0, 57, 227, 0.83); margin-top:25px;">UNIVERSITY OF SCIENCE AND TECHNOLOGY</h2>
         </div>
-
+    <!-- <div class = "tieude">
+            <h1 > Màn hình giám sát và điều khiển thiết bị </h1>
+        </div>-->
         <div class="titlecontrol">
             <div class="screencontrol">
                 <div class="control-frame">
-                    <h1>Màn hình điều khiển thiết bị</h1>
+                    <h1>Hệ thống điều khiển thiết bị</h1>
                     <!-- Điều khiển đèn -->
                     <div class="lightsystem">
                         <h2> Hệ thống đèn </h2>
@@ -49,6 +47,7 @@
                     <div class = "cuasystem">
                         <h2> Hệ thống cửa </h2>
                     </div>
+                  
                     <div class="control-light">
                         <div class="light1-title">
                             <p>Đèn 1: </p>
@@ -152,16 +151,31 @@
             <div class="screencontrol">
                 <div class="supervise-frame">
                     <h1>Hệ thống camera giám sát</h1>
+                    <h2 style="margin-top:-20px">Camera tầng 1</h2>
                     <video id="cameraFeed" autoplay></video> <!-- video -->
+                    <h2>Camera tầng 2</h2>
                     <video id="cameraFeed1" autoplay></video> <!-- video -->
                 </div>
             </div>
         </div>
         <div class="mainmanhinhgiamsat">
                 <div class="manhinhgiamsat">
-                    <h1>Màn hình giám sát thiết bị</h1>
+                    <!-- Độ ẩm -->
+                    <div id="humi-container">
+                        <p id="humi-value" style = "font-size:70px;">Độ ẩm: </p>
+                    </div>
+                    <!-- Nhiệt độ -->
+                    <div id="temp-container">
+                        <p id="temp-value" style = "font-size:70px; ">Nhiệt độ</p>
+                    </div>
+                    <!-- Khí ga -->
+                    <div id="gas-container">
+                        <p id="gas-value" style = "font-size:70px; ">Cảm biến khí ga</p>
+                    </div>
                 </div>
             </div>
+            <button class = "button-style" onclick="startListening()">Mời bạn nói </button>
+            <div id="output"></div>
         <div class = "thongtin">
             <h1>Thông tin thành viên</h1>
         </div>
@@ -193,7 +207,13 @@
             <div class="logout-btn">
                 <button type="button" id="logoutButton" onclick="logout_function()">Log out</button>
             </div>
-            
+            <div class="texttemp">Nhiệt độ</div>
+            <div class="texttemp1">Độ ẩm</div>
+            <div class="texttemp2">Khí ga</div>
+            <div class = "rectangle">
+            <div class = "square1">
+            <div class = "square2">
+            <div class = "square3">
         </div>
 </body>
 </html>
