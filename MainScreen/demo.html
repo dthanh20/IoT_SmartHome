@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Smart Home</title>
+    <link rel="stylesheet" href="./demo.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./demo.js"></script>
+    <script src="./dminit.js"></script>
+</head>
+<body>
+
+    <div class="background-image">
+        <img src="./imgmain.jpg" alt="Hình nền">
+    </div> 
+    <!--Logo -->
+    <div class = "Logomain">
+        <img src = "./bachkhoa.jpg" alt="Anh Bach Khoa" class = "logobachkhoa">
+        <div class = "Cokhi">
+            <img src = "./cokhi.png" alt="Anh Co Khi" class = "logocokhi">
+        </div>
+        <div class = "smarthome">
+            <img src = "./smarthome.png" alt="Nha Thong Minh" class = "logosmarthome">
+        </div>  
+    </div>
+    <!-- Tên của trường -->
+    <div class = "Tentruong">
+        <h2 style ="color: rgba(57, 164, 251, 0.83); font-size:28px; margin-top: 30px">THE UNIVERSITY OF DANANG</h2>
+        <h2 style = "color: rgba(0, 57, 227, 0.83); margin-top:25px;">UNIVERSITY OF SCIENCE AND TECHNOLOGY</h2>
+    </div>
+     <!-- Hiển thị các thông số bên firebase truyền qua -->
+    <div class="container">
+    <div class="card temperature">
+        <h2>Temperature</h2>
+        <p id="temp-value"></p>
+    </div>
+    <div class="card humidity">
+        <h2>Humidity</h2>
+        <p id="humi-value"></p>
+    </div>
+    <div class="card gas">
+        <h2>Gas</h2>
+        <p id="gas-value"></p>
+    </div>
+    </div>
+    <!-- Màn hình điều khiển các thiết bị -->
+    <div class="titlecontrol">
+        <div class="screencontrol">
+            <div class="control-frame">
+                <h1 style = "color: rgb(0, 149, 255)">Device control system</h1>
+                <!-- Điều khiển đèn -->
+                <div class="lightsystem">
+                    <h2> Lighting system</h2>
+                </div>
+                <div class = "spansystem">
+                    <h2> Fan system </h2>
+                </div>
+                <div class = "remsystem">
+                    <h2> Curtain system </h2>
+                </div>
+                <div class = "cuasystem">
+                    <h2> Door system </h2>
+                </div>
+              
+                <div class="control-light">
+                    <div class="light1-title">
+                        <p>Light 1: </p>
+                    </div>
+                    <div class="toggle-container">
+                        <input type="checkbox" class="toggle-checkbox" id="toggle1" onclick="toggleButtonClick(1)" />
+                        <label class="toggle-label" for="toggle1">
+                            <div class="toggle-indicator" id="indicator1"></div>
+                            <div class="toggle-text"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="control-light">
+                    <div class="light2-title">
+                        <p>Light 2: </p>
+                    </div>
+                    <div class="toggle-container">
+                        <input type="checkbox" class="toggle-checkbox" id="toggle2" onclick="toggleButtonClick(2)" />
+                        <label class="toggle-label" for="toggle2">
+                            <div class="toggle-indicator" id="indicator2"></div>
+                            <div class="toggle-text"></div>
+                        </label>
+                    </div>
+                </div>
+                <!-- Điều khiển quạt -->
+                <div class="control-span">
+                    <div class="span1-title">
+                        <p>Fan: </p>
+                    </div>
+                    <div class="toggle-container1">
+                        <input type="checkbox" class="toggle-checkbox1" id="toggleFan1" onclick="toggleButtonClickFan(1)" />
+                        <label class="toggle-label1" for="toggleFan1">
+                            <div class="toggle-indicator1" id="indicatorFan1"></div>
+                            <div class="toggle-text1"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="control-span">
+                    <div class="rem1-title">
+                        <p>Curtain 1: </p>
+                    </div>
+                    <div class="toggle-container2">
+                        <input type="checkbox" class="toggle-checkbox2" id="toggleRem1" onclick="toggleButtonClickRem(1)" />
+                        <label class="toggle-label2" for="toggleRem1">
+                            <div class="toggle-indicator2" id="indicatorRem1"></div>
+                            <div class="toggle-text2"></div>
+                        </label>
+                    </div>
+                </div>
+                <div class="control-span">
+                    <div class="cua-title">
+                        <p>Door: </p>
+                    </div>
+                    <div class="toggle-container4">
+                        <input type="checkbox" class="toggle-checkbox4" id="toggleCua1" onclick="toggleButtonClickCua(1)" />
+                        <label class="toggle-label4" for="toggleCua1">
+                            <div class="toggle-indicator4" id="indicatorCua1"></div>
+                            <div class="toggle-text4"></div>
+                        </label>
+                    </div>
+                    <!-- Slider light 1-->
+                    <div class="slider-container1">
+                        <input type="range" min="0" max="255" value="0" class="slider1" id="slider1">
+                        <span id="slider-value1">0</span>
+                    </div>
+                    <!-- Slider light 2-->
+                    <div class="slider-container2">
+                        <input type="range" min="0" max="255" value="0" class="slider2" id="slider2">
+                        <span id="slider-value2">0</span>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div class="screencontrol">
+            <div class="supervise-frame">
+                <h1 style = "color: rgb(0, 149, 255)">Camera surveillance system </h1>
+                <h2 style="margin-top:-20px">Camera on the 1st floor</h2>
+                <video id="cameraFeed" autoplay></video> <!-- video -->
+                <h2>Camera on the 2nd floor</h2>
+                <video id="cameraFeed1" autoplay></video> <!-- video -->
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="member">
+            <img src="../Information/linh.png" alt="Anh1">
+            <button type="button" onclick="showInformation('linh')"><a href = "../Information/linh.html">Detail information</a></button>
+        </div>
+        <div class="member">
+            <img src="../Information/thuy.png" alt="Anh2">
+            <button type="button" onclick="showInformation('thuy')"><a href = "../Information/thuy.html">Detail information</a></button>
+        </div>
+        <div class="member">
+            <img src="../Information/thanh.png" alt="Anh3">
+            <button type="button" onclick="showInformation('thanh')"><a href = "../Information/thanh.html">Detail information</a></button>
+        </div>
+        <div class="member">
+            <img src="../Information/phu.png" alt="Anh4">
+            <button type="button" onclick="showInformation('phu')"><a href = "../Information/phu.html">Detail information</a></button>
+        </div>
+        <div class="member">
+            <img src="../Information/quyen.png" alt="Anh5">
+            <button type="button" onclick="showInformation('quyen')"><a href = "../Information/quyen.html">Detail information</a></button>
+        </div>
+        <div class="member">
+            <img src="../Information/anh.png" alt="Anh6">
+            <button type="button" onclick="showInformation('anh')"><a href = "../Information/anh.html">Detail information</a></button>
+        </div>
+        <!-- Nút hoạt động lắng nghe -->
+        <div class="auto-frame">
+            <h1 style = "color: rgb(0, 149, 255)">Voice Control</h1>
+            <button class="button-style" onclick="startListening()">Connect Speech</button>
+            <span id="listeningStatus"></span>
+            <h1 style = "color: rgb(0, 149, 255)" class="change-password">Password Door</h1>
+            <div class="ChangeDoor">
+                <form onsubmit="return ChangePasswordDoor();">
+                    <button type="submit">Change Password</button>
+            </div>
+
+        </div>
+        
+    
+        <!-- Nút Logout -->
+        <div class="logout-btn">
+            <button style = "font-size: 15px;" type="button" id="logoutButton" onclick="logout_function()">Log out</button>
+        </div>
+</body>
+</html>

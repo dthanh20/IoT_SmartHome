@@ -1,0 +1,879 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(244, 252, 255);
+}
+.background-image img {
+    width: 100%; /* Đặt chiều rộng của hình ảnh */
+    height: 1200px; /* Giữ tỷ lệ chiều cao của hình ảnh */
+    opacity: 0.15; /* Đặt độ mờ của hình ảnh */
+    position: absolute; /* Vị trí tuyệt đối cho phép hình ảnh nằm ở phía sau */
+    left: 0;
+    top: 110px;
+    z-index: -1; /* Đảm bảo hình ảnh nằm sau các nội dung khác */
+}
+
+/* Tổng hợp Logo */
+.Logomain {
+    position: absolute ;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.83);
+    width: 100px;
+    height: 70px;
+    z-index: 1;
+    border-radius: 25px; /* Adjust the value based on your preference */
+}
+.logobachkhoa {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+.logocokhi {
+    display: flex;
+    width: 105px;
+    height: 105px;
+    margin-left: 25px;
+}
+.logosmarthome{
+    display: flex;
+    width: 220px;
+    height: 200px;
+    margin-left: 1020px;
+    margin-top: 10px;
+
+}
+
+/*Tên của trường */
+.Tentruong {
+    font-size: 15px;
+    line-height: 15px;
+    margin-left: 300px;
+    margin-top: 25px;
+    position: relative;
+    z-index: 1; /* Đặt z-index lớn hơn 0 để chữ nằm trên background */
+}
+
+.Tentruong::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 10px; /* Tuỳ chọn: Điều chỉnh giá trị dựa trên sở thích của bạn */
+}
+
+/*Nhiệt độ độ ẩm */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+  
+.card {
+    flex-basis: 20%;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.temperature {
+    border-left: 5px solid #ff4500;
+}
+
+.humidity {
+border-left: 5px solid #1e90ff;
+}
+  
+.gas {
+border-left: 5px solid #32cd32;
+}
+  
+.card h2 {
+margin: 0 0 15px 0;
+color: #333;
+}
+
+.card p {
+margin: 0;
+font-size: 24px;
+color: #666;
+}
+/* Màn hình điều khiển */ 
+.titlecontrol {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 100px; /* Adjust the margin as needed */
+}
+
+.screencontrol {
+    display: flex;
+    justify-content: space-between;
+}
+
+.screencontrol h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.lightsystem h2{
+    margin-left: -330px;
+    color: rgb(255, 56, 1);
+}
+.spansystem h2{
+    position: relative;
+    margin-top: -30px;
+    margin-right: -300px;
+    color: rgb(255, 56, 1);
+}
+
+.remsystem {
+    position: relative;
+    top: 60px; /* Khoảng cách từ trên xuống */
+    left: 160px; /* Khoảng cách từ trái sang phải */
+    color: rgb(255, 56, 1);
+}
+.cuasystem {
+    position: relative;
+    top: 80px; /* Khoảng cách từ trên xuống */
+    left: -10px; /* Khoảng cách từ trái sang phải */
+    color: rgb(255, 56, 1);
+}
+
+.control-light {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 1px;
+}
+
+.light1-title,
+.light2-title
+{
+    position: relative;
+    font-size: 20px;
+    color: #000dff;
+    top: -30px;
+    left: 20px;
+}
+
+.lightsystem h2{
+    margin-left: -330px;
+    color: rgb(255, 56, 1);
+}
+.spansystem h2{
+    position: relative;
+    margin-top: -30px;
+    margin-right: -300px;
+    color: rgb(255, 56, 1);
+}
+
+.remsystem {
+    position: relative;
+    top: 60px; /* Khoảng cách từ trên xuống */
+    left: 160px; /* Khoảng cách từ trái sang phải */
+    color: rgb(255, 56, 1);
+}
+.cuasystem {
+    position: absolute;
+    margin-top: 180px; /* Khoảng cách từ trên xuống */
+    margin-left: 360px; /* Khoảng cách từ trái sang phải */
+    color: rgb(255, 56, 1);
+}
+.control-light {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 1px;
+}
+
+.span1-title {
+    color: #000dff;
+    font-size: 20px;
+    position: relative;
+    top: -160px; /* Điều chỉnh vị trí theo y */
+    left: 360px; /* Điều chỉnh vị trí theo x */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
+}
+
+.rem1-title {
+    color: #000dff;
+    font-size: 20px;
+    position: relative;
+    top: -140px; /* Điều chỉnh vị trí theo y */
+    left: 330px; /* Điều chỉnh vị trí theo x */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
+}
+
+.cua-title{
+    color: #000dff;
+    font-size: 20px;
+    position: relative;
+    top: -140px; /* Điều chỉnh vị trí theo y */
+    left: 360px; /* Điều chỉnh vị trí theo x */
+    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */   
+}
+
+.span4-title{
+    font-size: 20px;
+    color: #ff0000;
+    margin-left: 296px;
+    margin-top: -75px;
+}
+.control-span {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    margin-top: 1px;
+}
+.button-style{
+    position: relative;
+    font-size: 20px;;
+    top: -105px;
+    right: -350px;
+}
+
+/* Nút nhấn đèn */ 
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 85px; /* Increased width to accommodate the text */
+    height: 34px;
+    top: -27px;
+    margin-right: 20px; /* Add some spacing between buttons */
+    margin-left: 40px;
+}
+
+.toggle-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6a6a6;
+    border-radius: 34px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-indicator {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 5px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.toggle-text {
+    position: absolute;
+    top: 8.5px;
+    left: 38px;
+    color: #fff;
+    font-size: 15px;
+    transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background: #4CAF50; /* Green color when checked */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-indicator {
+    transform: translateX(53px);
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-text::before {
+    position: absolute;
+    left: -15px;
+    content: "ON";
+}
+
+.toggle-checkbox:not(:checked) + .toggle-label .toggle-text::before {
+    position: absolute;
+    left: 0px;
+    content: "OFF";
+}
+
+ /* Nút nhấn quạt */
+ .toggle-container1 {
+    position: relative;
+    display: inline-block;
+    width: 85px; /* Increased width to accommodate the text */
+    height: 34px;
+    left: 380px;
+    top: -160px;
+}
+
+.toggle-checkbox1 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6a6a6;
+    border-radius: 34px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-indicator1 {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.toggle-text1 {
+    position: absolute;
+    top: 8.5px;
+    left: 38px;
+    color: #fff;
+    font-size: 15px;
+    transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.toggle-checkbox1:checked + .toggle-label1 {
+    background: #4CAF50; /* Green color when checked */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+}
+
+.toggle-checkbox1:checked + .toggle-label1 .toggle-indicator1 {
+    transform: translateX(53px);
+}
+
+.toggle-checkbox1:checked + .toggle-label1 .toggle-text1::before {
+    position: absolute;
+    left: -15px;
+    content: "ON";
+}
+
+.toggle-checkbox1:not(:checked) + .toggle-label1 .toggle-text1::before {
+    position: absolute;
+    left: 0px;
+    content: "OFF";
+}
+
+
+/* Nút nhấn rèm  */
+
+.toggle-container2{
+    position: relative;
+    display: inline-block;
+    width: 85px; /* Increased width to accommodate the text */
+    height: 34px;
+    left: 350px;
+    top: -140px;
+}
+.toggle-container3{
+    position: relative;
+    display: inline-block;
+    width: 85px; /* Increased width to accommodate the text */
+    height: 34px;
+    left: 350px;
+    top: -270px;
+}
+.toggle-checkbox2, .toggle-checkbox3 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label2, .toggle-label3 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6a6a6;
+    border-radius: 34px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-indicator2, .toggle-indicator3 {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.toggle-text2, .toggle-text3 {
+    position: absolute;
+    top: 8.5px;
+    left: 38px;
+    color: #fff;
+    font-size: 15px;
+    transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.toggle-checkbox2:checked + .toggle-label2, .toggle-checkbox3:checked + .toggle-label3 {
+    background: #4CAF50; /* Green color when checked */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+}
+
+.toggle-checkbox2:checked + .toggle-label2 .toggle-indicator2, .toggle-checkbox3:checked + .toggle-label3 .toggle-indicator3 {
+    transform: translateX(53px);
+}
+
+.toggle-checkbox2:checked + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:checked + .toggle-label3 .toggle-text3::before{
+    position: absolute;
+    left: -15px;
+    content: "ON";
+}
+
+.toggle-checkbox2:not(:checked) + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:not(:checked) + .toggle-label3 .toggle-text3::before {
+    position: absolute;
+    left: 0px;
+    content: "OFF";
+}
+
+/* Điều khiển cửa  */
+    /*  Nút nhấn đèn */
+.toggle-container4 {
+    position: relative;
+    display: inline-block;
+    width: 135px; /* Increased width to accommodate the text */
+    height: 34px;
+    top: -140px; /* Add some spacing between buttons */
+    left: 385px;
+}
+
+.toggle-checkbox4 {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-label4 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a6a6a6;
+    border-radius: 34px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-indicator4 {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.toggle-text4 {
+    position: absolute;
+    top: 8.5px;
+    left: 38px;
+    color: #fff;
+    font-size: 15px;
+    transition: transform 0.3s; /* Add transition for smooth animation */
+}
+
+.toggle-checkbox4:checked + .toggle-label4 {
+    background: #4CAF50; /* Green color when checked */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+}
+
+.toggle-checkbox4:checked + .toggle-label4 .toggle-indicator4 {
+    transform: translateX(53px);
+}
+
+.toggle-checkbox4:checked + .toggle-label4 .toggle-text4::before {
+    position: absolute;
+    left: -15px;
+    content: "ON";
+}
+
+.toggle-checkbox4:not(:checked) + .toggle-label4 .toggle-text4::before {
+    position: absolute;
+    left: 0px;
+    content: "OFF";
+}
+
+/*  Camera */
+#cameraFeed {
+    margin-top: 10px;
+    width: 50%; /* Tăng chiều rộng lên 70% để video rộng hơn */
+    max-width: 800px; /* Giới hạn chiều rộng tối đa */
+    border: 2px solid #279ffc; /* Giữ nguyên màu viền xanh lam */
+    border-radius: 15px; /* Giữ nguyên độ cong góc viền */
+    padding: 15px; /* Giữ nguyên khoảng cách padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Giảm hiệu ứng đổ bóng */
+    transition: none; /* Loại bỏ hiệu ứng chuyển động */
+    opacity: 0.9; /* Thêm độ mờ để hình ảnh phía sau nhẹ nhàng hơn */
+}
+
+
+#cameraFeed1 {
+    margin-top: 10px;
+    width: 50%; /* Tăng chiều rộng lên 70% để video rộng hơn */
+    max-width: 800px; /* Giới hạn chiều rộng tối đa */
+    border: 2px solid #279ffc; /* Giữ nguyên màu viền xanh lam */
+    border-radius: 15px; /* Giữ nguyên độ cong góc viền */
+    padding: 15px; /* Giữ nguyên khoảng cách padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Giảm hiệu ứng đổ bóng */
+    transition: none; /* Loại bỏ hiệu ứng chuyển động */
+    opacity: 0.9; /* Thêm độ mờ để hình ảnh phía sau nhẹ nhàng hơn */
+}
+/* Điều khiển */
+.control-frame {
+    background-color: #f9fdff;
+    position: relative;
+    top: 80px;
+    right: -90px;
+    border: 2px solid #279ffc;
+    border-radius: 30px;
+    padding: 10px;
+    text-align: center;
+    width: 550px; /* Điều chỉnh chiều rộng nếu cần */
+    height: 400px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ nhàng hơn */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho transform và box-shadow */
+}
+
+.control-frame:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng nhẹ nhàng hơn khi hover */
+    transform: translateY(-10px);
+}
+
+/* Giám sát */
+
+.supervise-frame {
+    background-color: #f9fdff;
+    position: relative;
+    top: 50px;
+    border: 2px solid #279ffc; /* Giữ nguyên màu viền xanh dương */
+    border-radius: 20px; /* Làm tròn góc nhẹ nhàng hơn */
+    padding: 20px; /* Tăng padding cho không gian rộng rãi hơn */
+    text-align: center;
+    width: 500px; /* Nhẹ nhàng điều chỉnh chiều rộng */
+    height: auto; /* Cho phép chiều cao tự điều chỉnh theo nội dung */
+    margin: 20px auto; /* Căn giữa và tăng khoảng cách dưới */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng nhẹ nhàng */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho transform và box-shadow */
+}
+
+.supervise-frame:hover {
+    transform: translateY(-10px); /* Khi hover, nhấc nhẹ lên */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi hover */
+}
+
+.supervise-frame h2{
+    color: rgba(2, 149, 255, 0.7);
+}
+
+
+/* Điều chỉnh video */
+video {
+    width: 100%; /* Video chiếm toàn bộ chiều rộng khung */
+    border-radius: 10px; /* Làm tròn góc cho video */
+    margin-top: 10px; /* Khoảng cách giữa video và tiêu đề */
+}
+
+/* Thành viên */ 
+.row {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.row img {
+    position: relative;
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 200px;
+    height: 180px;
+    top: -100px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.row img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px  #279ffc;;
+}
+
+.member {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Đảm bảo các nút xếp chồng lên nhau */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+}
+
+.member button {
+    margin-top: -100px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.member button:hover {
+    background-color: #b4d7fb;
+}
+
+/* Nút lắng nghe */
+.auto-frame {
+    background-color: #f9fdff;
+    position: relative;
+    top: -150px;
+    right: 220px;
+    border: 2px solid #279ffc; /* Giữ nguyên màu viền xanh dương */
+    border-radius: 20px; /* Làm tròn góc nhẹ nhàng hơn */
+    padding: 20px; /* Tăng padding cho không gian rộng rãi hơn */
+    text-align: center;
+    width: 500px; /* Nhẹ nhàng điều chỉnh chiều rộng */
+    height: 100px; /* Cho phép chiều cao tự điều chỉnh theo nội dung */
+    margin: 20px auto; /* Căn giữa và tăng khoảng cách dưới */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng nhẹ nhàng */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động cho transform và box-shadow */
+}
+
+.auto-frame:hover {
+    transform: translateY(-10px); /* Khi hover, nhấc nhẹ lên */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Đổ bóng mạnh hơn khi hover */
+}
+.auto-frame h1{
+    position: relative;
+    top: -20px;
+    right: 140px;
+    font-size: 27px;
+}
+
+/* .auto-frame button {
+    position: relative;
+    top: -25px;
+    right: 150px;
+} */
+.auto-frame button {
+    position: relative;
+    top: -25px;
+    right: 140px;
+    background-color: #50a5fa; /* Màu nền */
+    border: none; /* Không có đường viền */
+    color: white; /* Màu chữ */
+    padding: 10px 27px; /* Kích thước nút */
+    text-align: center; /* Căn chỉnh chữ giữa nút */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; /* Bo tròn các góc */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.auto-frame button:hover {
+    background-color: #4189fd; /* Màu nền khi di chuột qua */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Hiệu ứng đổ bóng */
+    transform: translateY(-3px); /* Dịch chuyển lên trên một chút */
+}
+.auto-frame .change-password {
+    position: relative;
+    top: -135px;
+    right: -110px;
+}
+
+.auto-frame .ChangeDoor {
+    position: relative;
+    top: -115px;
+    right: -250px; 
+}
+
+/* Nút đăng xuất */
+ .logout-btn button {
+    position: relative;
+    top: -30px;
+    left: -1350px;
+    padding: 10px 20px;
+    background-color: #ff1c1c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.logout-btn button:hover {
+    background-color: #f1a17f;
+}
+
+/* Slider 1*/
+.slider-container1 {
+    position: relative;
+    width: 50%; /* Độ rộng của container */
+    padding: 20px; /* Khoảng cách xung quanh container */
+    top: -160px;
+    right: 77px;
+    z-index: 1;
+}
+
+.slider1 {
+    width: 100%;
+    -webkit-appearance: none; /* Loại bỏ giao diện mặc định của slider trên Safari */
+    appearance: none; /* Loại bỏ giao diện mặc định của slider trên các trình duyệt khác */
+    height: 40px; /* Chiều cao của slider */
+    background: #d3d3d3; /* Màu nền của slider */
+    outline: none; /* Loại bỏ đường viền */
+    opacity: 1; /* Độ trong suốt của slider */
+    -webkit-transition: .2s; /* Hiệu ứng chuyển đổi */
+    transition: opacity .2s; /* Hiệu ứng chuyển đổi */
+    border-radius: 20px; /* Bo tròn viền của slider */
+}
+
+.slider1:hover {
+    opacity: 1; /* Hiển thị slider đầy đủ khi rê chuột vào */
+}
+
+.slider1::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Loại bỏ giao diện mặc định của thanh cầm trên Safari */
+    appearance: none; /* Loại bỏ giao diện mặc định của thanh cầm trên các trình duyệt khác */
+    width: 35px; /* Độ rộng của thanh cầm */
+    height: 35px; /* Chiều cao của thanh cầm */
+    background: #4CAF50; /* Màu của thanh cầm */
+    cursor: pointer; /* Con trỏ khi di chuột qua thanh cầm */
+    border-radius: 50%; /* Bo tròn thanh cầm */
+}
+
+.slider1::-moz-range-thumb {
+    width: 50px; /* Độ rộng của thanh cầm */
+    height: 20px; /* Chiều cao của thanh cầm */
+    background: #4CAF50; /* Màu của thanh cầm */
+    cursor: pointer; /* Con trỏ khi di chuột qua thanh cầm */
+    border-radius: 50%; /* Bo tròn thanh cầm */
+}
+
+#slider-value1 {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+/* Slider 2*/
+.slider-container2 {
+    position: relative;
+    width: 50%; /* Độ rộng của container */
+    padding: 20px; /* Khoảng cách xung quanh container */
+    top: -80px;
+    right: 285px;
+    z-index: 1;
+}
+
+.slider2 {
+    width: 100%;
+    -webkit-appearance: none; /* Loại bỏ giao diện mặc định của slider trên Safari */
+    appearance: none; /* Loại bỏ giao diện mặc định của slider trên các trình duyệt khác */
+    height: 40px; /* Chiều cao của slider */
+    background: #d3d3d3; /* Màu nền của slider */
+    outline: none; /* Loại bỏ đường viền */
+    opacity: 1; /* Độ trong suốt của slider */
+    -webkit-transition: .2s; /* Hiệu ứng chuyển đổi */
+    transition: opacity .2s; /* Hiệu ứng chuyển đổi */
+    border-radius: 20px; /* Bo tròn viền của slider */
+}
+
+.slider2:hover {
+    opacity: 1; /* Hiển thị slider đầy đủ khi rê chuột vào */
+}
+
+.slider2::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Loại bỏ giao diện mặc định của thanh cầm trên Safari */
+    appearance: none; /* Loại bỏ giao diện mặc định của thanh cầm trên các trình duyệt khác */
+    width: 35px; /* Độ rộng của thanh cầm */
+    height: 35px; /* Chiều cao của thanh cầm */
+    background: #4CAF50; /* Màu của thanh cầm */
+    cursor: pointer; /* Con trỏ khi di chuột qua thanh cầm */
+    border-radius: 50%; /* Bo tròn thanh cầm */
+}
+
+.slider2::-moz-range-thumb {
+    width: 50px; /* Độ rộng của thanh cầm */
+    height: 20px; /* Chiều cao của thanh cầm */
+    background: #4CAF50; /* Màu của thanh cầm */
+    cursor: pointer; /* Con trỏ khi di chuột qua thanh cầm */
+    border-radius: 50%; /* Bo tròn thanh cầm */
+}
+
+#slider-value2 {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.ChangepassDoor {
+    position: relative;
+    right: 1000px;
+}
+
+.password-container form input:hover {
+    border: 2px solid #007bff; 
+}
+.password-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    border: 2px solid #0099ff; /* Màu đỏ */
+}

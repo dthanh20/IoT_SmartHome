@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website password door</title>
+    <link rel="stylesheet" href="./passDoor.css">
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+</head>
+<body>
+    <div class="password-container">
+        <h1> Change Password Door </h1>
+        <form onsubmit="return ChangePasswordDoor();">
+            <label for="password-old1">Current Password: </label>
+            <input type="password" id="password-old1" name="password-old1" required>
+            <br>
+            <label for="password-new1">New Password: </label>
+            <input type="password" id="password-new1" name="password-new1" required>
+            <br>
+            <button type="button" onclick="changePasswordoor()">Change Password</button>
+            <br>
+            <button type="button" onclick="Back1()">Back</button>
+
+    </div>
+    <script src="./passDoor.js"></script>
+
+</body>
+
+</html>

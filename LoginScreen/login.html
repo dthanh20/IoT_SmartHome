@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login System</title>
-    <link rel="stylesheet" href="./login.css">  
+    <link rel="stylesheet" href="./login.css"> 
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    
 </head>
 <body>
     <div class="login-container">
@@ -22,6 +26,10 @@
 
             <button type="submit">Login</button>
         </form>
+        <div class="ChangePasswordForm">
+            <form onsubmit="return ChangePasswordWeb();">
+                <button type="submit">Change Password</button>
+        </div>
     </div>
     <script src="./login.js"></script>
 </body>

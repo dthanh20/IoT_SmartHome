@@ -1,734 +1,743 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: rgb(244, 252, 255);
-}
-.Logomain {
-    position: absolute ;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.83);
-    width: px;
-    height: 70px;
-    z-index: 1;
-    border-radius: 25px; /* Adjust the value based on your preference */
-}
-
-.logobachkhoa {
-    display: flex;
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
-}
-.logocokhi {
-    display: flex;
-    width: 105px;
-    height: 105px;
-    margin-left: 25px;
-}
-.logosmarthome{
-    display: flex;
-    width: 220px;
-    height: 200px;
-    margin-left: 1020px;
-    margin-top: 10px;
-
-}
-.Tentruong {
-    font-size: 15px;
-    line-height: 15px;
-    margin-left: 300px;
-    margin-top: 25px;
-    position: relative;
-    z-index: 1; /* Đặt z-index lớn hơn 0 để chữ nằm trên background */
-}
-
-.Tentruong::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-radius: 10px; /* Tuỳ chọn: Điều chỉnh giá trị dựa trên sở thích của bạn */
-}
-
-.tieude {
-    font-size: 25px;
-    text-align: center;
-    color: red;
-    position: relative;
-    top: 15px;
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.row img {
-    position: relative;
-    flex: 1 1 auto;
-    max-width: 100%;
-    width: 200px;
-    height: 180px;
-    top: 100px;
-    margin: 10px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.row img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 12px rgba(17, 255, 0, 0.9);
-}
-
-.member {
-    text-align: center;
-    display: flex;
-    flex-direction: column; /* Đảm bảo các nút xếp chồng lên nhau */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
-}
-
-.member button {
-    margin-top: 120px;
-    padding: 5px 10px;
-    background-color: #4285f4;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.member button:hover {
-    background-color: #315f8d;
-}
-
-
-.thongtin {
-    font-size: 25px;
-    text-align: center;
-    color: red;
-    position: relative;
-    top: 110px;
-}
-
-
-.screencontrol{
-    color: blue;
-    margin-left: 100px;
-}
-.logout-btn button {
-    position: relative;
-    top: 40px;
-    left: -1350px;
-    padding: 10px 20px;
-    background-color: #ff0000;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s ease-in-out;
-    z-index: 1;
-}
-
-.logout-btn button:hover {
-    background-color: #0004ff;
-}
-
-.titlecontrol {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 100px; /* Adjust the margin as needed */
-}
-
-
-.control-frame {
-    position: relative;
-    top: 140px;
-    right: -90px;
-    border: 2px solid #279ffc;
-    border-radius: 30px;
-    padding: 10px;
-    text-align: center;
-    width: 550px; /* Điều chỉnh chiều rộng nếu cần */
-    height: 400px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
-    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-}
-
-.control-frame:hover {
-    box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
-}
-.supervise-frame {
-    position: relative;
-    top: 50px;
-    border: 2px solid #279ffc;
-    border-radius: 30px;
-    padding: 10px;
-    text-align: center;
-    width: 450px; /* Điều chỉnh chiều rộng nếu cần */
-    height: 560px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
-    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-}
-
-.supervise-frame:hover {
-    box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
-}
-.supervise-frame h2{
-    color: red;
-}
-.screencontrol {
-    display: flex;
-    justify-content: space-between;
-}
-
-.screencontrol h2 {
-    margin: 0;
-    font-size: 25px;
-}
-
-.light1-title,
-.light2-title,
-.light3-title,
-.light4-title {
-    font-size: 20px;
-    color: #000dff;
-    margin-left: 10px;
-}
-
-.lightsystem h2{
-    margin-left: -360px;
-    color: rgb(255, 56, 1);
-}
-.spansystem h2{
-    position: relative;
-    margin-top: -30px;
-    margin-right: -300px;
-    color: rgb(255, 56, 1);
-}
-
-.remsystem {
-    position: absolute;
-    margin-top: 60px; /* Khoảng cách từ trên xuống */
-    margin-left: 320px; /* Khoảng cách từ trái sang phải */
-    color: rgb(255, 56, 1);
-}
-.cuasystem {
-    position: absolute;
-    margin-top: 210px; /* Khoảng cách từ trên xuống */
-    margin-left: 330px; /* Khoảng cách từ trái sang phải */
-    color: rgb(255, 56, 1);
-}
-.control-light {
-    display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    margin-top: 1px;
-}
-
-.span1-title {
-    color: #000dff;
-    font-size: 20px;
-    position: relative;
-    top: -260px; /* Điều chỉnh vị trí theo y */
-    left: 330px; /* Điều chỉnh vị trí theo x */
-    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
-}
-
-.rem1-title {
-    color: #000dff;
-    font-size: 20px;
-    position: relative;
-    top: -240px; /* Điều chỉnh vị trí theo y */
-    left: 330px; /* Điều chỉnh vị trí theo x */
-    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
-}
-
-.rem2-title {
-    color: #000dff;
-    font-size: 20px;
-    position: relative;
-    top: -240px; /* Điều chỉnh vị trí theo y */
-    left: 330px; /* Điều chỉnh vị trí theo x */
-    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
-}
-.cua-title{
-    color: #000dff;
-    font-size: 20px;
-    position: relative;
-    top: -220px; /* Điều chỉnh vị trí theo y */
-    left: 330px; /* Điều chỉnh vị trí theo x */
-    transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */   
-}
-.manhinhgiamsat h1{
-    position: relative;
-    color: #000dff;
-    top: -80px;
-    right: -270px;
-}
-.weather-info {
-    position: absolute;
-    margin: 10px; /* Điều này có thể điều chỉnh theo nhu cầu của bạn */
-}
-.span4-title{
-    font-size: 20px;
-    color: #ff0000;
-    margin-left: 296px;
-    margin-top: -75px;
-}
-.control-span {
-    display: flex;
-    align-items: center; /* Căn giữa theo chiều dọc */
-    margin-top: 1px;
-}
-.button-style{
-    position: relative;
-    font-size: 20px;;
-    top: -105px;
-    right: -350px;
-}
-
-/* ------------------- Nút nhấn đèn */
-.toggle-container {
-    position: relative;
-    display: inline-block;
-    width: 85px; /* Increased width to accommodate the text */
-    height: 34px;
-    margin-right: 20px; /* Add some spacing between buttons */
-    margin-left: 20px;
-}
-
-.toggle-checkbox {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-label {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #a6a6a6;
-    border-radius: 34px;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.toggle-indicator {
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.toggle-text {
-    position: absolute;
-    top: 8.5px;
-    left: 38px;
-    color: #fff;
-    font-size: 15px;
-    transition: transform 0.3s; /* Add transition for smooth animation */
-}
-
-.toggle-checkbox:checked + .toggle-label {
-    background: #4CAF50; /* Green color when checked */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-indicator {
-    transform: translateX(53px);
-}
-
-.toggle-checkbox:checked + .toggle-label .toggle-text::before {
-    position: absolute;
-    left: -15px;
-    content: "ON";
-}
-
-.toggle-checkbox:not(:checked) + .toggle-label .toggle-text::before {
-    position: absolute;
-    left: 0px;
-    content: "OFF";
-}
-
-/* Nút nhấn quạt */
-.toggle-container1 {
-    position: relative;
-    display: inline-block;
-    width: 85px; /* Increased width to accommodate the text */
-    height: 34px;
-    left: 360px;
-    margin-top: -520px;
-}
-
-.toggle-checkbox1 {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-label1 {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #a6a6a6;
-    border-radius: 34px;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.toggle-indicator1 {
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.toggle-text1 {
-    position: absolute;
-    top: 8.5px;
-    left: 38px;
-    color: #fff;
-    font-size: 15px;
-    transition: transform 0.3s; /* Add transition for smooth animation */
-}
-
-.toggle-checkbox1:checked + .toggle-label1 {
-    background: #4CAF50; /* Green color when checked */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
-}
-
-.toggle-checkbox1:checked + .toggle-label1 .toggle-indicator1 {
-    transform: translateX(53px);
-}
-
-.toggle-checkbox1:checked + .toggle-label1 .toggle-text1::before {
-    position: absolute;
-    left: -15px;
-    content: "ON";
-}
-
-.toggle-checkbox1:not(:checked) + .toggle-label1 .toggle-text1::before {
-    position: absolute;
-    left: 0px;
-    content: "OFF";
-}
-
-/* Nút nhấn rèm  */
-
-.toggle-container2, .toggle-container3   {
-    position: relative;
-    display: inline-block;
-    width: 85px; /* Increased width to accommodate the text */
-    height: 34px;
-    left: 360px;
-    top: -240px;
-}
-
-.toggle-checkbox2, .toggle-checkbox3 {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-label2, .toggle-label3 {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #a6a6a6;
-    border-radius: 34px;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.toggle-indicator2, .toggle-indicator3 {
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.toggle-text2, .toggle-text3 {
-    position: absolute;
-    top: 8.5px;
-    left: 38px;
-    color: #fff;
-    font-size: 15px;
-    transition: transform 0.3s; /* Add transition for smooth animation */
-}
-
-.toggle-checkbox2:checked + .toggle-label2, .toggle-checkbox3:checked + .toggle-label3 {
-    background: #4CAF50; /* Green color when checked */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
-}
-
-.toggle-checkbox2:checked + .toggle-label2 .toggle-indicator2, .toggle-checkbox3:checked + .toggle-label3 .toggle-indicator3 {
-    transform: translateX(53px);
-}
-
-.toggle-checkbox2:checked + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:checked + .toggle-label3 .toggle-text3::before{
-    position: absolute;
-    left: -15px;
-    content: "ON";
-}
-
-.toggle-checkbox2:not(:checked) + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:not(:checked) + .toggle-label3 .toggle-text3::before {
-    position: absolute;
-    left: 0px;
-    content: "OFF";
-}
-/* Điều khiển Cua  */
-/* ------------------- Nút nhấn đèn */
-.toggle-container4 {
-    position: relative;
-    display: inline-block;
-    width: 85px; /* Increased width to accommodate the text */
-    height: 34px;
-    top: -220px; /* Add some spacing between buttons */
-    left: 361px;
-}
-
-.toggle-checkbox4 {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.toggle-label4 {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #a6a6a6;
-    border-radius: 34px;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.toggle-indicator4 {
-    position: absolute;
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #fff;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.toggle-text4 {
-    position: absolute;
-    top: 8.5px;
-    left: 38px;
-    color: #fff;
-    font-size: 15px;
-    transition: transform 0.3s; /* Add transition for smooth animation */
-}
-
-.toggle-checkbox4:checked + .toggle-label4 {
-    background: #4CAF50; /* Green color when checked */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
-}
-
-.toggle-checkbox4:checked + .toggle-label4 .toggle-indicator4 {
-    transform: translateX(53px);
-}
-
-.toggle-checkbox4:checked + .toggle-label4 .toggle-text4::before {
-    position: absolute;
-    left: -15px;
-    content: "ON";
-}
-
-.toggle-checkbox4:not(:checked) + .toggle-label4 .toggle-text4::before {
-    position: absolute;
-    left: 0px;
-    content: "OFF";
-}
-
-#cameraFeed {
-    margin-top: 10px;
-    width: 50%; /* Tăng chiều rộng lên 70% */
-    max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
-    border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
-    border-radius: 15px; /* Tăng độ cong góc viền */
-    padding: 15px; /* Tăng khoảng cách padding */
-    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
-    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-}
-
-#cameraFeed1 {
-    margin-top: 10px;
-    width: 50%; /* Tăng chiều rộng lên 70% */
-    max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
-    border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
-    border-radius: 15px; /* Tăng độ cong góc viền */
-    padding: 15px; /* Tăng khoảng cách padding */
-    box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
-    transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
-}
-/* Độ ẩm */
-#humi-container {
-    position: absolute;
-    font-size: 10px;
-    color: red;
-    text-align: center;
-    top: 100px;
-    right: 920px;
-    z-index: 1;
-}
-#humi-value {
-    position: relative;
-    font-size: 22px;
-    color: red;
-    top: 350px;
-    right: 400px;
-}
-/* Khí ga */
-#gas-container {
-    position: absolute;
-    font-size: 22px;
-    color: red;
-    text-align: center;
-    top:  715px;
-    right: 920px;
-    z-index: 1;
-}
-#gas-value {
-    position: relative;
-    font-size: 22px;
-    color: red;
-    top: -10px;
-    right: 400px;
-}
-/* Nhiệt độ */
-#temp-container {
-    position: absolute;
-    font-family: monospace;
-    /* font-size: 22px; */
-    color: red;
-    text-align: center;
-    top:  600px;
-    right: 900px;
-    z-index: 1;
-}
-#temp-value {
-    position: relative;
-    font-size: 22px;
-    color: rgb(0, 13, 255);
-    top: -400px;
-    right: 420px;
-}
-
-
-.rectangle{
-    width: 230px;
-    height: 850px;
-    background-color: #a0d9ff;
-    position: absolute;
-    top: 161px;
-    right: 1280px;
-    margin-top: -50px; 
-    border-radius: 30px; 
-    opacity: 0.5;
-}
-.square1{
-    width: 230px;
-    height: 200px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 150px;
-    margin-top: -100px; 
-    border-radius: 30px; 
-    
-    
-}
-.square2{
-    width: 230px;
-    height: 200px;
-    background-color: #ffffff;
-    position: absolute;
-    top: 300px;
-    margin-top: -50px; 
-    border-radius: 30px; 
-}
-.square3{
-    width: 230px;
-    height: 200px;
-    background-color: #ffffff;
-    position: relative;
-    top: 250px; 
-    border-radius: 30px; 
-}
-
-.texttemp{
-    position: relative;
-    font-size: 30px;
-    font-family: "Helvetica Neue";
-    top: -1020px;
-    right: 190px;
-    z-index: 1;
-    font-weight: bold;
-}
-.texttemp1{
-    position: relative;
-    font-size: 30px;
-    font-family: "Helvetica Neue";
-    top: -770px;
-    right: 700px;
-    z-index: 1;
-    font-weight: bold;
-}
-.texttemp2{
-    position: relative;
-    font-size: 30px;
-    font-family: "Helvetica Neue";
-    top: -515px;
-    right: 1190px;
-    z-index: 1;
-    font-weight: bold;
-}
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: rgb(244, 252, 255);
+    }
+    .Logomain {
+        position: absolute ;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.83);
+        width: 100px;
+        height: 70px;
+        z-index: 1;
+        border-radius: 25px; /* Adjust the value based on your preference */
+    }
+
+    .logobachkhoa {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    .logocokhi {
+        display: flex;
+        width: 105px;
+        height: 105px;
+        margin-left: 25px;
+    }
+    .logosmarthome{
+        display: flex;
+        width: 220px;
+        height: 200px;
+        margin-left: 1020px;
+        margin-top: 10px;
+
+    }
+    .Tentruong {
+        font-size: 15px;
+        line-height: 15px;
+        margin-left: 300px;
+        margin-top: 25px;
+        position: relative;
+        z-index: 1; /* Đặt z-index lớn hơn 0 để chữ nằm trên background */
+    }
+
+    .Tentruong::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border-radius: 10px; /* Tuỳ chọn: Điều chỉnh giá trị dựa trên sở thích của bạn */
+    }
+
+    .tieude {
+        font-size: 25px;
+        text-align: center;
+        color: red;
+        position: relative;
+        top: 15px;
+    }
+
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .row img {
+        position: relative;
+        flex: 1 1 auto;
+        max-width: 100%;
+        width: 200px;
+        height: 180px;
+        top: 100px;
+        margin: 10px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .row img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 12px rgba(17, 255, 0, 0.9);
+    }
+
+    .member {
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Đảm bảo các nút xếp chồng lên nhau */
+        align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    }
+
+    .member button {
+        margin-top: 120px;
+        padding: 5px 10px;
+        background-color: #4285f4;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .member button:hover {
+        background-color: #315f8d;
+    }
+
+
+    .thongtin {
+        font-size: 25px;
+        text-align: center;
+        color: red;
+        position: relative;
+        top: 110px;
+    }
+
+
+    .screencontrol{
+        color: blue;
+        margin-left: 100px;
+    }
+    .logout-btn button {
+        position: relative;
+        top: 40px;
+        left: -1350px;
+        padding: 10px 20px;
+        background-color: #ff0000;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: background-color 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .logout-btn button:hover {
+        background-color: #0004ff;
+    }
+
+    .titlecontrol {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 100px; /* Adjust the margin as needed */
+    }
+
+
+    .control-frame {
+        position: relative;
+        top: 140px;
+        right: -90px;
+        border: 2px solid #279ffc;
+        border-radius: 30px;
+        padding: 10px;
+        text-align: center;
+        width: 550px; /* Điều chỉnh chiều rộng nếu cần */
+        height: 400px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+        transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    }
+
+    .control-frame:hover {
+        box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
+    }
+    .supervise-frame {
+        position: relative;
+        top: 50px;
+        border: 2px solid #279ffc;
+        border-radius: 30px;
+        padding: 10px;
+        text-align: center;
+        width: 450px; /* Điều chỉnh chiều rộng nếu cần */
+        height: 560px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+        transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    }
+
+    .supervise-frame:hover {
+        box-shadow: 0 0 25px rgba(43, 0, 255, 0.9); /* Thay đổi hiệu ứng đổ bóng khi hover */
+    }
+    .supervise-frame h2{
+        color: red;
+    }
+    .screencontrol {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .screencontrol h2 {
+        margin: 0;
+        font-size: 25px;
+    }
+
+    .light1-title,
+    .light2-title,
+    .light3-title,
+    .light4-title {
+        position: relative;
+        font-size: 20px;
+        color: #000dff;
+        top: -30px;
+        left: 20px;
+    }
+
+    .lightsystem h2{
+        margin-left: -330px;
+        color: rgb(255, 56, 1);
+    }
+    .spansystem h2{
+        position: relative;
+        margin-top: -30px;
+        margin-right: -300px;
+        color: rgb(255, 56, 1);
+    }
+
+    .remsystem {
+        position: relative;
+        top: 60px; /* Khoảng cách từ trên xuống */
+        left: 160px; /* Khoảng cách từ trái sang phải */
+        color: rgb(255, 56, 1);
+    }
+    .cuasystem {
+        position: absolute;
+        margin-top: 180px; /* Khoảng cách từ trên xuống */
+        margin-left: 360px; /* Khoảng cách từ trái sang phải */
+        color: rgb(255, 56, 1);
+    }
+    .control-light {
+        display: flex;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        margin-top: 1px;
+    }
+
+    .span1-title {
+        color: #000dff;
+        font-size: 20px;
+        position: relative;
+        top: -285px; /* Điều chỉnh vị trí theo y */
+        left: 360px; /* Điều chỉnh vị trí theo x */
+        transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
+    }
+
+    .rem1-title {
+        color: #000dff;
+        font-size: 20px;
+        position: relative;
+        top: -260px; /* Điều chỉnh vị trí theo y */
+        left: 330px; /* Điều chỉnh vị trí theo x */
+        transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
+    }
+
+    .rem2-title {
+        color: #000dff;
+        font-size: 20px;
+        position: relative;
+        top: -270px; /* Điều chỉnh vị trí theo y */
+        left: 330px; /* Điều chỉnh vị trí theo x */
+        transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */
+    }
+    .cua-title{
+        color: #000dff;
+        font-size: 20px;
+        position: relative;
+        top: -250px; /* Điều chỉnh vị trí theo y */
+        left: 360px; /* Điều chỉnh vị trí theo x */
+        transition: all 0.3s ease; /* Thêm transition cho hiệu ứng chuyển động */   
+    }
+    .manhinhgiamsat h1{
+        position: relative;
+        color: #000dff;
+        top: -80px;
+        right: -270px;
+    }
+    .weather-info {
+        position: absolute;
+        margin: 10px; /* Điều này có thể điều chỉnh theo nhu cầu của bạn */
+    }
+    .span4-title{
+        font-size: 20px;
+        color: #ff0000;
+        margin-left: 296px;
+        margin-top: -75px;
+    }
+    .control-span {
+        display: flex;
+        align-items: center; /* Căn giữa theo chiều dọc */
+        margin-top: 1px;
+    }
+    .button-style{
+        position: relative;
+        font-size: 20px;;
+        top: -105px;
+        right: -350px;
+    }
+
+    /* ------------------- Nút nhấn đèn */
+    .toggle-container {
+        position: relative;
+        display: inline-block;
+        width: 85px; /* Increased width to accommodate the text */
+        height: 34px;
+        top: -27px;
+        margin-right: 20px; /* Add some spacing between buttons */
+        margin-left: 40px;
+    }
+
+    .toggle-checkbox {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .toggle-label {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #a6a6a6;
+        border-radius: 34px;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-indicator {
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 5px;
+        bottom: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .toggle-text {
+        position: absolute;
+        top: 8.5px;
+        left: 38px;
+        color: #fff;
+        font-size: 15px;
+        transition: transform 0.3s; /* Add transition for smooth animation */
+    }
+
+    .toggle-checkbox:checked + .toggle-label {
+        background: #4CAF50; /* Green color when checked */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+    }
+
+    .toggle-checkbox:checked + .toggle-label .toggle-indicator {
+        transform: translateX(53px);
+    }
+
+    .toggle-checkbox:checked + .toggle-label .toggle-text::before {
+        position: absolute;
+        left: -15px;
+        content: "ON";
+    }
+
+    .toggle-checkbox:not(:checked) + .toggle-label .toggle-text::before {
+        position: absolute;
+        left: 0px;
+        content: "OFF";
+    }
+
+    /* Nút nhấn quạt */
+    .toggle-container1 {
+        position: relative;
+        display: inline-block;
+        width: 85px; /* Increased width to accommodate the text */
+        height: 34px;
+        left: 380px;
+        top: -285px;
+    }
+
+    .toggle-checkbox1 {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .toggle-label1 {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #a6a6a6;
+        border-radius: 34px;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-indicator1 {
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .toggle-text1 {
+        position: absolute;
+        top: 8.5px;
+        left: 38px;
+        color: #fff;
+        font-size: 15px;
+        transition: transform 0.3s; /* Add transition for smooth animation */
+    }
+
+    .toggle-checkbox1:checked + .toggle-label1 {
+        background: #4CAF50; /* Green color when checked */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+    }
+
+    .toggle-checkbox1:checked + .toggle-label1 .toggle-indicator1 {
+        transform: translateX(53px);
+    }
+
+    .toggle-checkbox1:checked + .toggle-label1 .toggle-text1::before {
+        position: absolute;
+        left: -15px;
+        content: "ON";
+    }
+
+    .toggle-checkbox1:not(:checked) + .toggle-label1 .toggle-text1::before {
+        position: absolute;
+        left: 0px;
+        content: "OFF";
+    }
+
+    /* Nút nhấn rèm  */
+
+    .toggle-container2{
+        position: relative;
+        display: inline-block;
+        width: 85px; /* Increased width to accommodate the text */
+        height: 34px;
+        left: 350px;
+        top: -260px;
+    }
+    .toggle-container3{
+        position: relative;
+        display: inline-block;
+        width: 85px; /* Increased width to accommodate the text */
+        height: 34px;
+        left: 350px;
+        top: -270px;
+    }
+    .toggle-checkbox2, .toggle-checkbox3 {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .toggle-label2, .toggle-label3 {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #a6a6a6;
+        border-radius: 34px;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-indicator2, .toggle-indicator3 {
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .toggle-text2, .toggle-text3 {
+        position: absolute;
+        top: 8.5px;
+        left: 38px;
+        color: #fff;
+        font-size: 15px;
+        transition: transform 0.3s; /* Add transition for smooth animation */
+    }
+
+    .toggle-checkbox2:checked + .toggle-label2, .toggle-checkbox3:checked + .toggle-label3 {
+        background: #4CAF50; /* Green color when checked */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+    }
+
+    .toggle-checkbox2:checked + .toggle-label2 .toggle-indicator2, .toggle-checkbox3:checked + .toggle-label3 .toggle-indicator3 {
+        transform: translateX(53px);
+    }
+
+    .toggle-checkbox2:checked + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:checked + .toggle-label3 .toggle-text3::before{
+        position: absolute;
+        left: -15px;
+        content: "ON";
+    }
+
+    .toggle-checkbox2:not(:checked) + .toggle-label2 .toggle-text2::before, .toggle-checkbox3:not(:checked) + .toggle-label3 .toggle-text3::before {
+        position: absolute;
+        left: 0px;
+        content: "OFF";
+    }
+    /* Điều khiển Cua  */
+    /* ------------------- Nút nhấn đèn */
+    .toggle-container4 {
+        position: relative;
+        display: inline-block;
+        width: 85px; /* Increased width to accommodate the text */
+        height: 34px;
+        top: -250px; /* Add some spacing between buttons */
+        left: 385px;
+    }
+
+    .toggle-checkbox4 {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .toggle-label4 {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #a6a6a6;
+        border-radius: 34px;
+        transition: background 0.3s, box-shadow 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-indicator4 {
+        position: absolute;
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+    }
+
+    .toggle-text4 {
+        position: absolute;
+        top: 8.5px;
+        left: 38px;
+        color: #fff;
+        font-size: 15px;
+        transition: transform 0.3s; /* Add transition for smooth animation */
+    }
+
+    .toggle-checkbox4:checked + .toggle-label4 {
+        background: #4CAF50; /* Green color when checked */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Box shadow effect when checked */
+    }
+
+    .toggle-checkbox4:checked + .toggle-label4 .toggle-indicator4 {
+        transform: translateX(53px);
+    }
+
+    .toggle-checkbox4:checked + .toggle-label4 .toggle-text4::before {
+        position: absolute;
+        left: -15px;
+        content: "ON";
+    }
+
+    .toggle-checkbox4:not(:checked) + .toggle-label4 .toggle-text4::before {
+        position: absolute;
+        left: 0px;
+        content: "OFF";
+    }
+
+    #cameraFeed {
+        margin-top: 10px;
+        width: 50%; /* Tăng chiều rộng lên 70% */
+        max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
+        border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
+        border-radius: 15px; /* Tăng độ cong góc viền */
+        padding: 15px; /* Tăng khoảng cách padding */
+        box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+        transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    }
+
+    #cameraFeed1 {
+        margin-top: 10px;
+        width: 50%; /* Tăng chiều rộng lên 70% */
+        max-width: 800px; /* Tăng giới hạn chiều rộng tối đa */
+        border: 2px solid #279ffc; /* Đổi màu viền thành màu xanh lam */
+        border-radius: 15px; /* Tăng độ cong góc viền */
+        padding: 15px; /* Tăng khoảng cách padding */
+        box-shadow: 0 0 20px rgba(2, 149, 255, 0.7); /* Thêm hiệu ứng đổ bóng */
+        transition: box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển động */
+    }
+    /* Độ ẩm */
+    #humi-container {
+        position: absolute;
+        font-size: 10px;
+        color: red;
+        text-align: center;
+        top: 100px;
+        right: 920px;
+        z-index: 1;
+    }
+    #humi-value {
+        position: relative;
+        font-size: 22px;
+        color: red;
+        top: 350px;
+        right: 400px;
+    }
+    /* Khí ga */
+    #gas-container {
+        position: absolute;
+        font-size: 22px;
+        color: red;
+        text-align: center;
+        top:  715px;
+        right: 920px;
+        z-index: 1;
+    }
+    #gas-value {
+        position: relative;
+        font-size: 22px;
+        color: red;
+        top: -10px;
+        right: 415px;
+    }
+    /* Nhiệt độ */
+    #temp-container {
+        position: absolute;
+        /* font-size: 22px; */
+        color: red;
+        text-align: center;
+        top:  600px;
+        right: 900px;
+        z-index: 1;
+    }
+    #temp-value {
+        position: relative;
+        font-size: 22px;
+        color: red;
+        top: -400px;
+        right: 420px;
+    }
+
+
+    .rectangle{
+        width: 230px;
+        height: 850px;
+        background-color: #a0d9ff;
+        position: absolute;
+        top: 161px;
+        right: 1280px;
+        margin-top: -50px; 
+        border-radius: 30px; 
+        opacity: 0.5;
+    }
+    .square1{
+        width: 230px;
+        height: 200px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 150px;
+        margin-top: -100px; 
+        border-radius: 30px; 
+        
+        
+    }
+    .square2{
+        width: 230px;
+        height: 200px;
+        background-color: #ffffff;
+        position: absolute;
+        top: 300px;
+        margin-top: -50px; 
+        border-radius: 30px; 
+    }
+    .square3{
+        width: 230px;
+        height: 200px;
+        background-color: #ffffff;
+        position: relative;
+        top: 250px; 
+        border-radius: 30px; 
+    }
+
+    .texttemp{
+        position: relative;
+        font-size: 22px;
+        font-family: "Helvetica Neue";
+        top: -1020px;
+        right: 190px;
+        z-index: 1;
+        font-weight: bold;
+    }
+    .texttemp1{
+        position: relative;
+        font-size: 22px;
+        font-family: "Helvetica Neue";
+        top: -770px;
+        right: 735px;
+        z-index: 1;
+        font-weight: bold;
+    }
+    .texttemp2{
+        position: relative;
+        font-size: 22px;
+        font-family: "Helvetica Neue";
+        top: -515px;
+        right: 1250px;
+        z-index: 1;
+        font-weight: bold;
+    }
